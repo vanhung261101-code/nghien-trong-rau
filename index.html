@@ -38,7 +38,30 @@
   <!-- Các Section sản phẩm động -->
   <section class="mb-16 pt-20 -mt-20 px-6" id="hat-giong">
     <h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Hạt giống chất lượng</h2>
-    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm đang được cập nhật...</p></div></div>
+    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+    <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
+      <!-- Vùng 1: Ảnh sản phẩm (Có link) -->
+      <a href="https://s.shopee.vn/60O5ymnjPG" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
+        <img alt="Hạt giống Rau Cải " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://down-vn.img.susercontent.com/file/sg-11134201-22100-mo3r76wmu6iv8d.webp">
+      </a>
+
+      <!-- Nút Yêu thích (Nằm trên, không dính link chính) -->
+      <button class="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+        <span class="material-symbols-outlined text-[18px]">favorite</span>
+      </button>
+
+      <!-- Vùng 2: Thông tin sản phẩm (Có link) -->
+      <a href="https://s.shopee.vn/60O5ymnjPG" target="_blank" class="p-4 flex flex-col flex-grow">
+        <h3 class="text-sm font-semibold text-gray-800 mb-1 truncate group-hover:text-green-700 transition-colors">Hạt giống Rau Cải </h3>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="text-green-700 font-bold">17.900₫</span>
+          <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center group-hover:bg-green-700 transition-colors">
+            <span class="material-symbols-outlined text-sm">add</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div></div>
   </section>
 
   <section class="mb-16 pt-20 -mt-20 px-6" id="cay-giong">
