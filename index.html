@@ -1,31 +1,64 @@
 
-<!DOCTYPE html><html lang="en" class="light"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nghiện Trồng Rau - Affiliate Store</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<style>.no-scrollbar::-webkit-scrollbar { display: none; } html { scroll-behavior: smooth; }</style>
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AgriSelect - AgriLife with Lan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
-<header class="bg-white/90 backdrop-blur-md border-b sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-  <div class="flex items-center gap-2 text-green-800 font-bold text-xl uppercase"><span class="material-symbols-outlined">eco</span> Nghiện trồng rau</div>
+<body class="bg-[#f9f9f8] text-[#191c1c] font-manrope antialiased">
+
+<!-- TopAppBar -->
+<header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-neutral-100 flex justify-between items-center px-6 py-4 shadow-sm">
+  <div class="flex items-center gap-3">
+    <span class="material-symbols-outlined text-green-800">eco</span>
+    <span class="text-xl font-extrabold text-green-900 uppercase tracking-wider">Nghiện trồng rau</span>
+  </div>
+  <div class="flex items-center">
+    <span class="material-symbols-outlined text-green-800 p-2 rounded-full cursor-pointer">shopping_cart</span>
+  </div>
 </header>
-<main class="max-w-[1200px] mx-auto py-8">
-  <section class="mb-12 sticky top-[72px] z-40 bg-gray-50/95 backdrop-blur-sm py-3 border-b border-gray-200">
+
+<main class="pt-24 pb-12 max-w-[1200px] mx-auto w-full overflow-x-hidden">
+  
+  <!-- Section 1: KOL Header -->
+  <section class="px-6 mb-12 flex flex-col items-center text-center">
+    <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm bg-gray-100">
+      <img alt="AgriLife with Lan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3TY0xN5grhGc4CGfueI2vaGJz8ldZjYycc3P84CptouNMj2y_VlBUMVk7cjvQWiLs_MnqaRaH8kBNsH-FKOowUsezFsJZX0BlGliTiSY-o57n8bi4Oi6rDv9tXMzqDYFw9k-Nh5iNELG7dxckMQYafYCJ4Z_WYqc8pb8bvHwBZIZbFlTa1ciRnba6I07bnvfVNZX3CEYEVR74C-lDqHNQO9U-wFOJ3voMyoABUa6rcheBnrh8wR0dKyNQsGKHUun6Ag9v-xjxHI">
+    </div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Nghiện Trồng Rau</h1>
+    <p class="text-lg text-gray-600 mb-6 max-w-md mx-auto">Chia sẻ đam mê làm vườn tại phố thị 🌿</p>
+    <div class="flex gap-4">
+      <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.6 5.56-1.1 1.6-2.72 2.74-4.63 3.16-1.91.42-3.95.23-5.74-.63-1.8-.86-3.23-2.38-3.96-4.18-.73-1.8-.75-3.88-.06-5.7.69-1.82 2.1-3.28 3.86-4.04 1.76-.76 3.8-.88 5.66-.34.34.1.66.25.96.42v4.06c-.45-.22-.95-.33-1.45-.33-1.39 0-2.65.74-3.35 1.93-.7 1.19-.7 2.67 0 3.86.7 1.19 1.96 1.93 3.35 1.93 1.39 0 2.65-.74 3.35-1.93.41-.7.63-1.5.63-2.32V.02z"></path></svg>
+      </button>
+      <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 2: Category Chips (Tab Panel) -->
+  <section class="mb-12 sticky top-[72px] z-40 bg-[#f9f9f8]/95 backdrop-blur-sm py-3 border-b border-gray-200">
     <div class="overflow-x-auto no-scrollbar px-6">
       <div class="flex gap-3 min-w-max">
         <a class="h-8 px-4 flex items-center rounded-full bg-green-700 text-white text-sm font-semibold" href="#hat-giong">Hạt giống</a>
-        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold" href="#cay-giong">Cây giống</a>
-        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold" href="#combo">Combo</a>
-        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold" href="#dat-trong">Đất trồng</a>
-        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold" href="#phan-bon">Phân bón</a>
-        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold" href="#dung-cu">Dụng cụ</a>
+        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold hover:bg-gray-100" href="#cay-giong">Cây giống</a>
+        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold hover:bg-gray-100" href="#combo">Combo</a>
+        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold hover:bg-gray-100" href="#dat-trong">Đất trồng</a>
+        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold hover:bg-gray-100" href="#phan-bon">Phân bón</a>
+        <a class="h-8 px-4 flex items-center rounded-full bg-white border border-gray-300 text-sm font-semibold hover:bg-gray-100" href="#dung-cu">Dụng cụ</a>
       </div>
     </div>
   </section>
 
-  <!-- Sections sản phẩm động -->
-  <section id="hat-giong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Hạt giống</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+  <!-- Sections sản phẩm -->
+  <section id="hat-giong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Hạt giống chất lượng</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
     <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
       
       <a href="https://s.shopee.vn/60O5ymnjPG" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
@@ -45,8 +78,8 @@
       </a>
     </div>
   </div></div></section>
-  <section id="cay-giong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Cây giống</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm sắp ra mắt...</p></div></div></section>
-  <section id="combo" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Combo tiết kiệm</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+  <section id="cay-giong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Cây giống</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm đang được cập nhật...</p></div></div></section>
+  <section id="combo" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Combo tiết kiệm</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
     <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
       
       <a href="https://s.shopee.vn/2VoDnTfHfi" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
@@ -123,7 +156,7 @@
       </a>
     </div>
   </div></div></section>
-  <section id="dat-trong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Đất trồng & Giá thể</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+  <section id="dat-trong" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Đất trồng & Giá thể</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
     <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
       
       <a href="https://s.shopee.vn/AKX58ICVfN" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
@@ -181,7 +214,7 @@
       </a>
     </div>
   </div></div></section>
-  <section id="phan-bon" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Phân bón</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+  <section id="phan-bon" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Phân bón</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
     <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
       
       <a href="https://s.shopee.vn/60O5yH3TaS" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
@@ -277,7 +310,7 @@
       </a>
     </div>
   </div></div></section>
-  <section id="dung-cu" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4">Dụng cụ nông nghiệp</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+  <section id="dung-cu" class="mb-16 pt-24 -mt-24 px-6"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-700 pl-4 text-gray-900">Dụng cụ nông nghiệp</h2><div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
     <div class="group w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative">
       
       <a href="https://s.shopee.vn/8Km0ki0NNN" target="_blank" class="block h-[200px] w-full bg-gray-100 overflow-hidden">
