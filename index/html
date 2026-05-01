@@ -1,59 +1,48 @@
 
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>AgriSelect - AgriLife with Lan</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style>
-    tailwind.config = { theme: { extend: { colors: { primary: "#0f5238" } } } };
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    html { scroll-behavior: smooth; }
-</style>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nghiện Trồng Rau</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<style>.no-scrollbar::-webkit-scrollbar { display: none; }</style>
 </head>
-<body class="bg-[#f9f9f8] text-[#191c1c] antialiased">
-<header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 w-full z-50 border-b border-neutral-100 flex justify-between items-center px-6 py-4">
-    <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-green-800">eco</span>
-        <span class="text-xl font-extrabold text-green-900 uppercase">Nghiện trồng rau</span>
-    </div>
+<body class="bg-gray-50 text-gray-900 antialiased">
+<header class="bg-white border-b sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+  <div class="flex items-center gap-2 text-green-700 font-bold text-xl uppercase">
+    <span class="material-symbols-outlined">eco</span> Nghiện trồng rau
+  </div>
 </header>
-<main class="pt-24 pb-12 max-w-[1200px] mx-auto w-full">
-    <section class="px-6 mb-12 flex flex-col items-center text-center">
-        <h1 class="text-4xl font-bold mb-2">Nghiện Trồng Rau</h1>
-        <p class="text-lg text-gray-600 mb-6">Chia sẻ đam mê làm vườn tại phố thị 🌿</p>
-    </section>
+<main class="max-w-[1200px] mx-auto py-10 px-6">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-extrabold text-gray-900">Nghiện Trồng Rau</h1>
+    <p class="text-gray-500 mt-2 text-lg">Chia sẻ đam mê làm vườn tại phố thị 🌿</p>
+  </div>
 
-    <!-- Các Section sản phẩm -->
-    <section class="mb-16 px-6" id="hat-giong">
-        <h2 class="text-2xl font-bold mb-6">Hạt giống chất lượng</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
+  <section class="mb-12"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-600 pl-4">Hạt giống</h2>
+    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max">
+    <div class="w-[200px] flex flex-col bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow">
+      <div class="h-[200px] w-full bg-gray-100 relative">
+        <img alt="Hạt ớt" class="w-full h-full object-cover" src="">
+      </div>
+      <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-sm font-semibold text-gray-800 mb-1 truncate">Hạt ớt</h3>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="text-green-700 font-bold">3.000₫</span>
+          <a href="" target="_blank" class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700">
+            <span class="material-symbols-outlined text-sm">add</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div></div></section>
+  
+  <section class="mb-12"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-600 pl-4">Cây giống</h2>
+    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm sắp ra mắt...</p></div></div></section>
 
-    <section class="mb-16 px-6" id="cay-giong">
-        <h2 class="text-2xl font-bold mb-6">Cây giống</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
+  <section class="mb-12"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-600 pl-4">Combo tiết kiệm</h2>
+    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm sắp ra mắt...</p></div></div></section>
 
-    <section class="mb-16 px-6" id="combo">
-        <h2 class="text-2xl font-bold mb-6">Combo tiết kiệm</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
-
-    <section class="mb-16 px-6" id="dat-trong">
-        <h2 class="text-2xl font-bold mb-6">Đất trồng & Giá thể</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
-
-    <section class="mb-16 px-6" id="phan-bon">
-        <h2 class="text-2xl font-bold mb-6">Phân bón</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
-
-    <section class="mb-16 px-6" id="dung-cu">
-        <h2 class="text-2xl font-bold mb-6">Dụng cụ nông nghiệp</h2>
-        <div class="overflow-x-auto no-scrollbar pb-4"><div class="flex gap-4 min-w-max"></div></div>
-    </section>
+  <section class="mb-12"><h2 class="text-2xl font-bold mb-6 border-l-4 border-green-600 pl-4">Đất trồng & Giá thể</h2>
+    <div class="overflow-x-auto no-scrollbar"><div class="flex gap-4 pb-4 min-w-max"><p class="text-gray-400 italic">Sản phẩm sắp ra mắt...</p></div></div></section>
 </main>
 </body></html>
