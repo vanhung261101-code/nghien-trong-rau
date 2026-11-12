@@ -1061,34 +1061,40 @@
       </a>
     </div>
   </div></div></section>
+<p class="text-center text-xs text-gray-400 px-6 mt-4">Trang sử dụng Google Analytics để thống kê lượt truy cập.</p>
 </main>
 
-<!-- GoatCounter (do luot truy cap, khong cookie). Chua bat: bo dau chu thich va thay MA_CUA_BAN sau khi tao tai khoan tai goatcounter.com
-<script data-goatcounter="https://MA_CUA_BAN.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
--->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7TCMCMQMV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-L7TCMCMQMV');
+</script>
 <script>
 (function () {
-  function track(name) {
-    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: name, event: true }); } catch (e) {}
+  function track(name, params) {
+    try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {}
   }
   var ua = navigator.userAgent || '';
   var params = new URLSearchParams(location.search);
   var inApp = /musical_ly|BytedanceWebview|Bytedance|TikTok|trill/i.test(ua) || params.get('debug') === 'tiktok';
   var isAndroid = /Android/i.test(ua);
 
-  track('xem-trang');
+  track('xem_trang', { kieu_xem: inApp ? 'trong_tiktok' : 'trinh_duyet_thuong' });
   if (inApp) {
     var g = document.getElementById('tt-guide'), p = document.getElementById('tt-pill');
     if (g) g.classList.remove('hidden');
-    if (p) { p.classList.remove('hidden'); p.classList.add('inline-flex'); p.addEventListener('click', function () { track('bam-goi-y-header'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'center' }); }); }
-    track('trong-tiktok');
+    if (p) { p.classList.remove('hidden'); p.classList.add('inline-flex'); p.addEventListener('click', function () { track('bam_goi_y_header'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'center' }); }); }
+    track('trong_tiktok');
   }
 
   var copyBtn = document.getElementById('tt-copy'), msg = document.getElementById('tt-copy-msg');
   function showMsg(t) { if (msg) { msg.textContent = t; msg.classList.remove('hidden'); } }
   if (copyBtn) copyBtn.addEventListener('click', function () {
     var url = location.origin + location.pathname;
-    track('sao-chep-link');
+    track('sao_chep_link');
     function fallback() {
       var ta = document.createElement('textarea');
       ta.value = url; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
@@ -1106,7 +1112,8 @@
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href*="s.shopee.vn"]');
     if (!a) return;
-    track('bam-san-pham-' + (a.getAttribute('data-src') || 'danh-muc'));
+    var card = a.closest('.group'), h = card && card.querySelector('h3');
+    track('bam_san_pham', { nguon: a.getAttribute('data-src') || 'danh_muc', san_pham: h ? h.textContent.trim().slice(0, 80) : '', kieu_xem: inApp ? 'trong_tiktok' : 'trinh_duyet_thuong' });
   });
 
   // THU NGHIEM (Android, chi bat khi them ?exp=intent vao link): mo thang app Shopee thay vi trang web
@@ -1116,7 +1123,7 @@
       if (!a) return;
       var u = new URL(a.href);
       e.preventDefault();
-      track('thu-nghiem-intent');
+      track('thu_nghiem_intent');
       location.href = 'intent://' + u.host + u.pathname + '#Intent;scheme=https;package=com.shopee.vn;S.browser_fallback_url=' + encodeURIComponent(a.href) + ';end';
     });
   }
